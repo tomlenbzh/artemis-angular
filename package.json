@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "node dist/server",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,7 +13,7 @@
     "build:ssr": "ng build --prod && ng run artemis-angular-app:server:production",
     "build:all": "npm run build:ssr && npm run serve:ssr",
     "prerender": "ng run artemis-angular-app:prerender",
-    "heroku-postbuild": "npm run build:ssr"
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
