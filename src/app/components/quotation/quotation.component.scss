@@ -1,0 +1,49 @@
+.quotation {
+  display: flex;
+  text-align: center;
+  color: white;
+  background: #3c3c3c;
+  padding: 25px 25px;
+  font-size: 21px;
+  line-height: 32px;
+  font-weight: 300;
+  align-items: flex-start;
+}
+
+/* ---------------------------------------- SMARTPHONES ---------------------------------------- */
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .quotation {
+    font-size: 1em;
+    margin: auto 15px;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .quotation {
+    font-size: 1em;
+    margin: auto 15px;
+  }
+}
+
+/* ---------------------------------------- iPADS ----------------------------------------- */
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+  .quotation {
+    font-size: 1.5em;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+  .quotation {
+    font-size: 1.5em;
+  }
+}

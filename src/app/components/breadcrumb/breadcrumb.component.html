@@ -1,0 +1,9 @@
+<h4 class="breadcrumbs">
+  <span class="home" (click)="navigateTo('/home')">{{ breadcrumbs[0] }}</span>
+  <span *ngIf="breadcrumbs.length > 1">
+    &nbsp;/&nbsp;
+    <span>{{ breadcrumbs[1] }}</span>
+  </span>
+  &nbsp;/&nbsp;
+  <span class="current-route">{{ title }}</span>
+</h4>

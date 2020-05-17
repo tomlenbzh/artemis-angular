@@ -1,0 +1,346 @@
+/* ++++++++++ CAROUSEL CLASSES ++++++++++ */
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  height: 350px !important;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-container:hover {
+  .carousel-slide-img {
+    transform: scale(1.1);
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 5%;
+  top: 0;
+  bottom: 0;
+  left: 5%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: unset;
+}
+
+.carousel-slide-img {
+  height: 350px;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+
+.carousel-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  transition: all ease-in-out 0.5s;
+}
+
+.carousel-content-txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  padding: 5vh 3vw 3vh;
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+
+.carousel-content-title {
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.5s;
+}
+
+.content-sentences {
+  display: grid;
+}
+
+.sentence {
+  display: flex;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: white;
+  margin-bottom: 5px;
+  transition: all ease-in-out 0.5s;
+}
+
+.sentence-icon {
+  margin: 8px 15px 0 0;
+  height: 12px;
+  width: 12px;
+  font-size: 12px;
+}
+
+/* ++++++++++ CONTROLS CLASSES ++++++++++ */
+
+.control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  transition: all ease-in-out 0.5s;
+}
+
+.left {
+  width: 10%;
+  left: -10%;
+  justify-content: center;
+}
+
+.right {
+  width: 10%;
+  right: -10%;
+  justify-content: center;
+}
+
+.ctrl-btn {
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.ctrl-btn:hover {
+  font-size: 1.5em;
+}
+
+/* ++++++++++ CAROUSEL IMAGES CLASSES ++++++++++ */
+
+.center {
+  object-position: center;
+}
+
+.mid-top {
+  object-position: 50% 25%;
+}
+
+/* ++++++++++ ANIMATION CLASSES ++++++++++ */
+
+.delay-6s {
+  animation-delay: 6s;
+}
+
+.delay-8s {
+  animation-delay: 8s;
+}
+
+/* ++++++++++ DOTS LIST ++++++++++ */
+
+.dots-list {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  margin: 5px;
+  height: 5px;
+  width: 5px;
+  border-radius: 5px;
+  background: #6c757d;
+  cursor: pointer;
+}
+
+.active {
+  background: white;
+}
+
+/* ++++++++++ MEDIA QUERIES ++++++++++ */
+
+@media only screen and (max-width: 992px) {
+  .carousel-content-title {
+    font-size: 1.2em;
+  }
+
+  .sentence {
+    font-size: 1em;
+    font-weight: 300;
+  }
+}
+
+@media only screen and (max-width: 815px) {
+  .carousel-content-txt {
+    padding: 5vh 3vw 3vh;
+  }
+
+  .carousel-content-title {
+    font-size: 1.2em;
+  }
+
+  .sentence {
+    font-size: 1em;
+    font-weight: 300;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel-content-txt {
+    padding: 5vh 3vw 3vh;
+  }
+
+  .carousel-content-title {
+    font-size: 1em;
+  }
+
+  .sentence {
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .carousel-content-txt {
+    padding: 5vh 10vw;
+  }
+
+  .carousel-content-title {
+    margin: auto auto !important;
+    text-align: center;
+  }
+
+  .content-sentences {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  .carousel,
+  .carousel-slide-img {
+    height: 200px;
+  }
+  .left {
+    left: 10px;
+    justify-content: flex-end;
+  }
+  .right {
+    right: 10px;
+    justify-content: flex-start;
+  }
+
+  .carousel-container:hover {
+    .left {
+      left: 10px;
+      justify-content: flex-end;
+    }
+    .right {
+      right: 10px;
+      justify-content: flex-start;
+    }
+  }
+  .ctrl-btn:hover {
+    font-size: 1em;
+  }
+}
+
+/* ---------------------------------------- SMARTPHONES ---------------------------------------- */
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  .carousel,
+  .carousel-slide-img {
+    height: 200px;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .carousel,
+  .carousel-slide-img {
+    height: 75vh;
+  }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  .carousel,
+  .carousel-slide-img {
+    height: 200px;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .carousel,
+  .carousel-slide-img {
+    height: 75vh;
+  }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  .carousel,
+  .carousel-slide-img {
+    height: 200px;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .carousel,
+  .carousel-slide-img {
+    height: 75px;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  .carousel,
+  .carousel-slide-img {
+    height: 200px;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .carousel,
+  .carousel-slide-img {
+    height: 75px;
+  }
+}
+
+/* ---------------------------------------- iPADS ----------------------------------------- */
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .carousel,
+  .carousel-slide-img {
+    height: 350px;
+  }
+}

@@ -1,0 +1,33 @@
+<!-- ++++++++++ PAGE SMALL HEADER ++++++++++ -->
+<artemis-page-small-header [headerContent]="headerContent"></artemis-page-small-header>
+
+<div class="container">
+  <!-- ++++++++++ PROFILE ++++++++++ -->
+  <artemis-profile [profile]="dynamicTxt.profile" [static]="staticContent.profile"></artemis-profile>
+
+  <!-- ++++++++++ ARTEMIS DESCRIPTION SECTION ++++++++++ -->
+  <section class="artemis-desc mt-50 mb-50" data-aos="fade-up" data-aos-once="true">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <!-- ++++++++++ ARTEMIS LOGO ++++++++++ -->
+        <div class="artemis-logo-container">
+          <img
+            class="artemis-logo"
+            [defaultImage]="staticContent.artemis.logo"
+            [lazyLoad]="staticContent.artemis.logo"
+          />
+        </div>
+      </div>
+      <!-- ++++++++++ ARTEMIS TITLE ++++++++++ -->
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="artemis-title">{{ dynamicTxt.artemis.title }}</div>
+      </div>
+    </div>
+    <!-- ++++++++++ ARTEMIS DESCRIPTION ++++++++++ -->
+    <div class="page-txt txt-j pt-50">
+      <div class="mb-20">{{ dynamicTxt.artemis.para1 }}</div>
+      <div class="mb-20">{{ dynamicTxt.artemis.para2 }}</div>
+      <div class="mb-20">{{ dynamicTxt.artemis.para3 }}</div>
+    </div>
+  </section>
+</div>

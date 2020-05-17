@@ -1,0 +1,29 @@
+.section-title {
+  margin: 0;
+  padding: 22px 25px 24px 25px;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 36px;
+  color: #4b4e53;
+  border-left: #4b4e53 2px solid;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  transition: all ease 0.5s;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 992px) {
+  .section-title {
+    padding: 10px 25px 12px 25px;
+    font-size: x-large;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .section-title {
+    font-size: large;
+  }
+}

@@ -1,0 +1,54 @@
+.hub-sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mat-drawer-inner-container {
+  overflow: hidden !important;
+}
+
+.hub-sidenav {
+  width: 300px;
+  background: #171b21;
+  overflow: hidden;
+}
+
+.hub-sidenav-logo-container {
+  padding: 20px;
+  text-align: center;
+  width: fit-content;
+}
+
+.hub-sidenav-logo {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.hub-sidenav-name {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 20px 0px 30px 0px;
+}
+
+.separator {
+  width: 100%;
+  border-bottom: 1px solid #b8b8b8;
+  margin-bottom: 20px;
+}
+
+.flags-container {
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+  padding: 0px 15%;
+}
+
+.flag {
+  width: 50%;
+}

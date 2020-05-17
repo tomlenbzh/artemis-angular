@@ -1,0 +1,24 @@
+<!-- ++++++++++ PAGE INTRODUCTION ++++++++++ -->
+<div class="intro-container">
+  <!-- ++++++++++ PAGE INTRODUCTION SMALL IMAGE ++++++++++ -->
+  <div class="intro-img-small-container mb-30">
+    <img
+      class="intro-img-small"
+      [defaultImage]="intro?.images.top"
+      [lazyLoad]="intro?.images.top"
+      [ngStyle]="{ 'object-position': intro?.images.topStyle }"
+    />
+  </div>
+  <!-- ++++++++++ PAGE INTRODUCTION CONTENT ++++++++++ -->
+  <div class="page-txt drop-cap mb-20 txt-j">
+    <img
+      class="intro-img"
+      [defaultImage]="intro?.images.full"
+      [lazyLoad]="intro?.images.full"
+      [ngStyle]="{ 'object-position': intro?.images.fullStyle }"
+    />
+    <div class="page-txt mb-20">{{ intro?.desc.txt1 }}</div>
+    <div class="page-txt mb-20">{{ intro?.desc.txt2 }}</div>
+    <div class="page-txt">{{ intro?.desc.txt3 }}</div>
+  </div>
+</div>

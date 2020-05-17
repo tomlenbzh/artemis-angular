@@ -1,0 +1,39 @@
+<!-- ++++++++++ PROFILE SECTION ++++++++++ -->
+<section class="profile-section" data-aos="fade-up" data-aos-once="true">
+  <!-- ++++++++++ PROFILE IMAGE SMALL SCREENS ++++++++++ -->
+  <div class="profile-small">
+    <div class="profile-small-bg" [defaultImage]="static.topImg" [lazyLoad]="static.topImg"></div>
+  </div>
+
+  <!-- ++++++++++ PROFILE CONTENT ++++++++++ -->
+  <div class="profile row">
+    <!-- ++++++++++ PROFILE DESCRIPTION ++++++++++ -->
+    <div class="col-md-8 col-sm-7 profile-txt">
+      <artemis-section-title [title]="profile.name"></artemis-section-title>
+      <div class="profile-desc page-txt txt-j mb-60">{{ profile.desc }}</div>
+      <!-- <div class="page-txt mt-20" style="font-weight: bold">Certified Executive & Managerial Coach</div>
+      <div class="page-txt" style="font-weight: bold">Intervenant X Ecole Polytechnique</div> -->
+    </div>
+    <!-- ++++++++++ PROFILE IMAGE LARGE SCREENS ++++++++++ -->
+    <div class="col-md-4 col-sm-5 profile-img-container">
+      <div class="profile-img" [defaultImage]="static.fullImg" [lazyLoad]="static.fullImg"></div>
+    </div>
+  </div>
+
+  <!-- ++++++++++ CERTIFICATIONS ++++++++++ -->
+  <div class="row">
+    <div class="col-12">
+      <div class="certification page-txt mb-50">
+        <div class="certif-title txt-c">{{ static.certif.title }}</div>
+        <!-- ++++++++++ INSTITUTIONS LOGOS ++++++++++ -->
+        <div class="institutions">
+          <div class="institution-item" *ngFor="let item of static.certif.institutions">
+            <a [href]="item.link" target="_blank" rel="noopener noreferrer">
+              <img [defaultImage]="item.image" [lazyLoad]="item.image" alt="{{ item.name }}" class="institution-logo" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

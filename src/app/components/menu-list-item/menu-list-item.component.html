@@ -1,0 +1,34 @@
+<!-- ++++++++++ SIDENAV EXPANDABLE MENU ++++++++++ -->
+
+<mat-list-item class="menu-list-item" (click)="toggleChildren()">
+  <div [ngStyle]="{ 'padding-left': depth * 12 + 'px' }">
+    {{ navItem.displayName }}
+    <span class="expand-icon" fxFlex *ngIf="navItem.children && navItem.children.length">
+      <span fxFlex></span>
+      <mat-icon [@indicatorRotate]="expanded ? 'expanded' : 'collapsed'">expand_more</mat-icon>
+    </span>
+  </div>
+
+  <img
+    *ngIf="navItem.type === 'PARENT_FLAG'"
+    class="currentFlag"
+    [defaultImage]="getCurrentFlag(navItem)"
+    [lazyLoad]="getCurrentFlag(navItem)"
+  />
+  <img
+    *ngIf="navItem.type === 'FLAG'"
+    class="routeFlag"
+    [defaultImage]="navItem.iconName"
+    [lazyLoad]="navItem.iconName"
+  />
+</mat-list-item>
+
+<!-- ++++++++++ SIDENAV EXPANDABLE MENU (CHILDREN ELEMENTS) ++++++++++ -->
+
+<div class="children-list" [ngClass]="expanded ? 'list-expand' : ''">
+  <artemis-menu-list-item
+    *ngFor="let child of navItem.children"
+    [navItem]="child"
+    [depth]="depth + 1"
+  ></artemis-menu-list-item>
+</div>

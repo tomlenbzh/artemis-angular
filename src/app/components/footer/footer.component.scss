@@ -1,0 +1,40 @@
+.footer-wrapper {
+  width: 100%;
+  text-align: center;
+  background: #152533;
+  overflow: hidden;
+}
+
+.footer-logo {
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  overflow: hidden;
+}
+
+.footer-logo:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.copyrights {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.desc {
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 100;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .footer-logo {
+    width: 200px;
+  }
+}

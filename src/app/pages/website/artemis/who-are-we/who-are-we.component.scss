@@ -1,0 +1,95 @@
+.container {
+  overflow: hidden;
+}
+
+.artemis-desc {
+  background: #ececec;
+  padding: 30px 20px;
+}
+
+.artemis-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.artemis-logo {
+  width: 100%;
+}
+
+.artemis-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  font-size: x-large;
+  line-height: initial;
+  font-weight: 400;
+  text-align: center;
+  color: #4b4e53;
+  text-transform: uppercase;
+}
+
+/***************************/
+
+.certification {
+  padding: 0 20px;
+  // margin-top: 50px;
+  font-weight: bold;
+  transition: all ease-in-out 0.5s;
+}
+
+.certif-title {
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.institutions {
+  display: flex;
+  transition: all ease-in-out 0.5s;
+}
+
+.institution-item {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  transition: all ease-in-out 0.5s;
+}
+
+.institution-logo {
+  height: 50px;
+  transition: all ease-in-out 0.5s;
+}
+
+.institution-logo:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.3s;
+}
+
+/***************************/
+
+@media only screen and (max-width: 992px) {
+  .artemis-title {
+    font-size: large;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .artemis-title {
+    margin-top: 30px;
+  }
+  .artemis-logo-container {
+    justify-content: center;
+  }
+  .artemis-logo {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .artemis-title {
+    margin-top: 20px;
+  }
+}

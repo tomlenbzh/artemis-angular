@@ -1,0 +1,12 @@
+<!-- ++++++++++ PAGE SMALL HEADER ++++++++++ -->
+<div class="page-small-header" id="top" #topRef>
+  <div class="container header-container">
+    <div class="header-txt">
+      <h1 class="header-title">{{ headerContent?.pageTitle }}</h1>
+      <artemis-breadcrumb
+        [breadcrumbs]="headerContent.breadcrumbs"
+        [title]="headerContent?.pageTitle"
+      ></artemis-breadcrumb>
+    </div>
+  </div>
+</div>

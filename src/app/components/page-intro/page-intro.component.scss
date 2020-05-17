@@ -1,0 +1,39 @@
+.intro-container {
+  background: #ececec;
+  padding: 15px 30px;
+}
+
+.intro-img-small-container {
+  width: 100%;
+  display: none;
+  height: 250px;
+}
+
+.intro-img {
+  float: right;
+  width: 250px;
+  height: 250px;
+  margin: 0 0 20px 20px;
+  object-fit: cover;
+}
+
+.intro-img-small {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.drop-cap:first-letter {
+  font-size: 3em;
+  float: left;
+  margin: 0.3em 0.2em 0.3em 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .intro-img {
+    display: none;
+  }
+  .intro-img-small-container {
+    display: block;
+  }
+}

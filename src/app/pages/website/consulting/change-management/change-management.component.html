@@ -1,0 +1,77 @@
+<!-- ++++++++++ PAGE SMALL HEADER ++++++++++ -->
+<artemis-page-small-header [headerContent]="headerContent"></artemis-page-small-header>
+
+<div class="container">
+  <!-- ++++++++++ PAGE INTRODUCTION ++++++++++ -->
+  <section id="introRef" #introRef class="section-container mt-30" data-aos="fade-up" data-aos-once="true">
+    <artemis-page-intro [intro]="pageIntro"></artemis-page-intro>
+  </section>
+
+  <!-- ++++++++++ PROGRESS BARS ++++++++++ -->
+  <section id="progressRef" #progressRef class="section-container mt-30" data-aos="fade-up" data-aos-once="true">
+    <artemis-section-title [title]="dynamicTxt.progressBars.title"></artemis-section-title>
+    <!-- ++++++++++ STUDY ++++++++++ -->
+    <div class="study">
+      <div *ngFor="let progressBar of dynamicTxt.progressBars.studies[0].figures">
+        <artemis-progress-bar [data]="progressBar"></artemis-progress-bar>
+      </div>
+      <div class="study-credits">{{ dynamicTxt.progressBars.studies[0].title }}</div>
+    </div>
+    <!-- ++++++++++ STUDY ++++++++++ -->
+    <div class="study" data-aos="fade-up" data-aos-once="true">
+      <div *ngFor="let progressBar of dynamicTxt.progressBars.studies[1].figures">
+        <artemis-progress-bar [data]="progressBar"></artemis-progress-bar>
+      </div>
+      <div class="study-credits">{{ dynamicTxt.progressBars.studies[1].title }}</div>
+    </div>
+  </section>
+
+  <!-- ++++++++++ CHANGE CONDUCT ++++++++++ -->
+  <section id="conductRef" #conductRef class="section-container mt-30" data-aos="fade-up" data-aos-once="true">
+    <artemis-section-title [title]="dynamicTxt.changeConduct.title"></artemis-section-title>
+    <!-- ++++++++++ CHANGE CONDUCT CONTENT ++++++++++ -->
+    <div class="intro-container text-container page-txt txt ">
+      <div class="mb-30 txt-j drop-cap">{{ dynamicTxt.changeConduct.description.text }}</div>
+      <div class="mb-30 bold">{{ dynamicTxt.changeConduct.description.label }}</div>
+
+      <!-- ++++++++++ LEVERS LIST ++++++++++ -->
+      <div class="mb-10 lever" *ngFor="let lever of dynamicTxt.changeConduct.description.levers">
+        <div class="lever-item">
+          <mat-icon class="lever-icon">arrow_right</mat-icon>
+          <span>
+            <span class="lever-label">{{ lever.title }}</span>
+            {{ lever.text }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ++++++++++ PRACTICAL METHODS ++++++++++ -->
+  <section id="termsRef" #termsRef class="section-container mt-30 mb-30" data-aos="fade-up" data-aos-once="true">
+    <artemis-section-title [title]="dynamicTxt.terms.title"></artemis-section-title>
+
+    <div class="intro-container text-container page-txt txt ">
+      <div class="mb-30 txt-j">
+        <span class="bold">{{ dynamicTxt.terms.txt1.company }}</span> {{ dynamicTxt.terms.txt1.activity1 }}
+        <span class="bold">{{ dynamicTxt.terms.txt1.levers }}</span> {{ dynamicTxt.terms.txt1.activity2 }}
+      </div>
+
+      <div class="mb-30 txt-j">{{ dynamicTxt.terms.txt2 }}</div>
+      <div class="mb-30 txt-j">{{ dynamicTxt.terms.txt3 }}</div>
+
+      <!-- ++++++++++ OBJECTIVES ++++++++++ -->
+      <div class="mb-10 lever" *ngFor="let term of dynamicTxt.terms.termsList">
+        <div class="lever-item">
+          <mat-icon class="lever-icon">arrow_right</mat-icon>
+          <span>
+            <span class="lever-label">{{ term.title }}</span>
+            {{ term.text }}
+          </span>
+        </div>
+      </div>
+
+      <div class="mt-30 mb-30 txt-j">{{ dynamicTxt.terms.txt3 }}</div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,51 @@
+<header>
+  <mat-toolbar class="app-header" [ngClass]="isOnTop === true ? 'header-transparent' : 'header-black'">
+    <!-- ++++++++++ ARTEMIS LOGO ++++++++++ -->
+    <span class="app-logo-container" [routerLink]="['/home']">
+      <img alt="App Logo" class="app-logo animated slideInLeft" [lazyLoad]="headerLogo" [defaultImage]="headerLogo" />
+    </span>
+
+    <div class="app-header-content-full">
+      <div *ngFor="let item of componentTxt; let i = index" class="nav-items">
+        <!-- ++++++++++ SINGLE ELEMENT ++++++++++ -->
+        <button mat-button class="app-header-btn" [routerLink]="item.route" *ngIf="!item.children">
+          {{ item.displayName }}
+        </button>
+
+        <!-- ++++++++++ ELEMENT WITH CHILDREN ++++++++++ -->
+        <div class="hasChildren" *ngIf="item.children">
+          <button mat-button class="app-header-btn">
+            {{ item.type !== 'PARENT_FLAG' ? item.displayName : '' }}
+            <img
+              *ngIf="item.type === 'PARENT_FLAG'"
+              class="parent-flag animated flipInY"
+              [defaultImage]="getCurrentFlag(item)"
+              [lazyLoad]="getCurrentFlag(item)"
+            />
+          </button>
+
+          <!-- ++++++++++ CHILDREN ++++++++++ -->
+          <div class="children" [ngClass]="isLastItem(componentTxt, i) === true ? 'children-right' : 'children-left'">
+            <button mat-button class="app-children-btn" *ngFor="let child of item.children" [routerLink]="child.route">
+              <div class="menu-button" (click)="manageAction(child)">
+                <div class="menu-button-label">
+                  {{ child.displayName }}
+                </div>
+                <div class="menu-button-icon" *ngIf="child.type === 'FLAG'">
+                  <img [defaultImage]="child.iconName" [lazyLoad]="child.iconName" class="child-flag" />
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ++++++++++ SIDENAV TOGGLE BUTTON ++++++++++ -->
+    <div class="app-header-content-small">
+      <button mat-icon-button class="mr-10 animated rotateIn" (click)="toggleSidenav()">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+</header>

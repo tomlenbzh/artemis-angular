@@ -1,0 +1,52 @@
+<!-- ++++++++++ FULL HEIGHT BACKGROUND ++++++++++ -->
+<section
+  class="full-width-img"
+  id="top"
+  #topRef
+  [defaultImage]="staticContent.headerBg"
+  [lazyLoad]="staticContent.headerBg"
+></section>
+
+<!-- ++++++++++ FULL HEIGHT BACKGROUND CONTENT ++++++++++ -->
+<div class="bg-content">
+  <div class="bg-content-middle">
+    <!-- ++++++++++ FULL HEIGHT BACKGROUND LOGO ++++++++++ -->
+    <img
+      class="animated zoomIn bg-logo mb-50"
+      alt="Artemis"
+      [defaultImage]="staticContent.headerBgLogo"
+      [lazyLoad]="staticContent.headerBgLogo"
+    />
+
+    <!-- ++++++++++ FULL HEIGHT BACKGROUND TEXT ++++++++++ -->
+    <!-- <h3 class="background-txt animated slideInLeft delay-1s mb-20">{{ dynamicTxt.bg.txt1 }}</h3> -->
+    <h3 class="background-txt animated fadeIn delay-1s">{{ dynamicTxt.bg.txt2 }}</h3>
+
+    <!-- ++++++++++ FULL HEIGHT BACKGROUND SCROLL BUTTON ++++++++++ -->
+    <div class="scroll-btn-container">
+      <button mat-mini-fab class="scroll-btn animated flipInY delay-2s" (click)="scrollTo('#carouselRef', 1000, -60)">
+        <mat-icon>expand_more</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- ++++++++++ CAROUSEL ++++++++++ -->
+  <section id="carouselRef" #carouselRef class="section-container" data-aos="fade-up" data-aos-once="true">
+    <artemis-section-title [title]="dynamicTxt.carousel.title"></artemis-section-title>
+    <artemis-carousel [slidesImg]="staticContent.carousel" [slidesTxt]="dynamicTxt.carousel.slides"></artemis-carousel>
+  </section>
+
+  <!-- ++++++++++ QUOTATION ++++++++++ -->
+  <section id="missionRef" #missionRef class="section-container" data-aos="fade-up" data-aos-once="true">
+    <artemis-section-title [title]="dynamicTxt.quotation.title"></artemis-section-title>
+    <artemis-quotation [quotation]="dynamicTxt.quotation.text"></artemis-quotation>
+  </section>
+
+  <!-- ++++++++++ BOXES ++++++++++ -->
+  <section id="boxesRef" #boxesRef class="section-container" data-aos="fade-up" data-aos-once="true">
+    <artemis-section-title [title]="dynamicTxt.boxes.title"></artemis-section-title>
+    <artemis-box-list [dynamic]="dynamicTxt.boxes" [static]="staticContent.boxes"></artemis-box-list>
+  </section>
+</div>

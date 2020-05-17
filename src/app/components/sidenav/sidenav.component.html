@@ -1,0 +1,15 @@
+<!-- ++++++++++ SIDENAV ++++++++++ -->
+
+<div class="sidenav" [ngClass]="isSidenavOpen ? 'open' : 'close'">
+  <!-- ++++++++++ SIDENAV LOGO ++++++++++ -->
+  <img src="../../../assets/images/logos/artemis-white.png" alt="Artemis" class="sidenav-logo" />
+
+  <!-- ++++++++++ SIDENAV ELEMNTS ++++++++++ -->
+  <mat-nav-list>
+    <artemis-menu-list-item *ngFor="let item of componentTxt; let i = index" [navItem]="item" [index]="i">
+    </artemis-menu-list-item>
+  </mat-nav-list>
+</div>
+
+<!-- ++++++++++ SIDENAV OVERLAy ++++++++++ -->
+<div *ngIf="isSidenavOpen" class="sidenav-overlay" id="overlay" #overlay (click)="toggleSidenav(false)"></div>

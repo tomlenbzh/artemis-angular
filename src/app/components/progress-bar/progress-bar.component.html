@@ -1,0 +1,16 @@
+<div class="counter-container">
+  <div class="progress-bar-header">
+    <div class="progress-bar-percent">
+      <h3 class="percent">{{ data.percent }}%</h3>
+    </div>
+    <div class="progress-bar-label">
+      <div class="page-txt">{{ data.label }}</div>
+    </div>
+  </div>
+
+  <div class="full-width-bar">
+    <div class="progress-bar-container" [ngStyle]="{ 'width.%': data.percent }">
+      <div class="my-progress-bar" [@slideInOut]="isOpen"></div>
+    </div>
+  </div>
+</div>

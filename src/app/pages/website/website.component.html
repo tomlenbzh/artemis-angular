@@ -1,0 +1,16 @@
+<!-- ++++++++++ LAYOUT CONTAINER ++++++++++ -->
+<div class="layout-container">
+  <!-- ++++++++++ SIDENAV ++++++++++ -->
+  <artemis-sidenav></artemis-sidenav>
+
+  <!-- ++++++++++ HEADER ++++++++++ -->
+  <artemis-header [isOnTop]="isOnTop" (emitter)="closeNav($event)" #header></artemis-header>
+
+  <!-- ++++++++++ ROUTER CONTAINER ++++++++++ -->
+  <div id="routerContainer" #routerContainer>
+    <router-outlet></router-outlet>
+
+    <!-- ++++++++++ FOOTER ++++++++++ -->
+    <artemis-footer></artemis-footer>
+  </div>
+</div>

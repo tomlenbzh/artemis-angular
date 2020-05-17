@@ -1,0 +1,75 @@
+<!-- ++++++++++ CAROUSEL ++++++++++ -->
+<div class="carousel-container">
+  <mdb-carousel
+    class="carousel slide"
+    [animation]="'slide'"
+    [interval]="'0'"
+    [noPause]="true"
+    [isControls]="false"
+    (activeSlideChange)="onActiveSlideChange($event)"
+    #carousel
+  >
+    <!-- ++++++++++ CAROUSEL SLIDES ++++++++++ -->
+    <mdb-carousel-item *ngFor="let slide of slidesImg; let i = index">
+      <div class="view w-100">
+        <img
+          class="carousel-slide-img"
+          [ngClass]="slide.imageClass"
+          [defaultImage]="slide.image"
+          [lazyLoad]="slide.image"
+        />
+        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+      </div>
+      <!-- ++++++++++ CAROUSEL SLIDE CONTENT ++++++++++ -->
+      <div class="carousel-caption">
+        <div class="carousel-content">
+          <div class="carousel-content-txt">
+            <!-- ++++++++++ CAROUSEL SLIDE CONTENT TITLE ++++++++++ -->
+            <h1 class="carousel-content-title txt-c animated zoomIn delay-1s">{{ slidesTxt[i].title }}</h1>
+
+            <!-- ++++++++++ CAROUSEL SLIDE CONTENT SENTENCES ++++++++++ -->
+            <div class="content-sentences">
+              <h3 class="sentence animated fadeInLeft delay-2s">
+                <mat-icon class="sentence-icon">fiber_manual_record</mat-icon>
+                {{ slidesTxt[i].txt[0] }}
+              </h3>
+              <h3 class="sentence animated fadeInLeft delay-4s">
+                <mat-icon class="sentence-icon">fiber_manual_record</mat-icon>
+                {{ slidesTxt[i].txt[1] }}
+              </h3>
+              <h3 class="sentence animated fadeInLeft delay-6s">
+                <mat-icon class="sentence-icon">fiber_manual_record</mat-icon>
+                {{ slidesTxt[i].txt[2] }}
+              </h3>
+              <h3 class="sentence animated fadeInLeft delay-8s">
+                <mat-icon class="sentence-icon">fiber_manual_record</mat-icon>
+                {{ slidesTxt[i].txt[3] }}
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mdb-carousel-item>
+
+    <!-- ++++++++++ DOTS NAVIGATION ++++++++++ -->
+    <div class="dots-list">
+      <div *ngFor="let dot of slidesImg; let id = index">
+        <div class="dot" [ngClass]="id === currentSlide ? 'active' : ''" (click)="onDotClick(id)"></div>
+      </div>
+    </div>
+  </mdb-carousel>
+
+  <!-- ++++++++++ PREV CONTROL ++++++++++ -->
+  <div class="control left">
+    <div class="ctrl-btn" (click)="onPreviousClick()">
+      <span class="lnr lnr-chevron-left"></span>
+    </div>
+  </div>
+
+  <!-- ++++++++++ NEXT CONTROL ++++++++++ -->
+  <div class="control right">
+    <div class="ctrl-btn" (click)="onNextClick()">
+      <span class="lnr lnr-chevron-right"></span>
+    </div>
+  </div>
+</div>
