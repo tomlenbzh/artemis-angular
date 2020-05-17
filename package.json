@@ -13,7 +13,7 @@
     "build:ssr": "ng build --prod && ng run artemis-angular-app:server:production",
     "build:all": "npm run build:ssr && npm run serve:ssr",
     "prerender": "ng run artemis-angular-app:prerender",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
